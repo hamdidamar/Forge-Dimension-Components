@@ -1,0 +1,52 @@
+/*
+* Copyright (c) Autodesk, Inc. All rights reserved
+* Written by Forge Design Automation team for Inventor
+*
+* Permission to use, copy, modify, and distribute this software in
+* object code form for any purpose and without fee is hereby granted,
+* provided that the above copyright notice appears in all copies and
+* that both that copyright notice and the limited warranty and
+* restricted rights notice below appear in all supporting
+* documentation.
+*
+* AUTODESK PROVIDES THIS PROGRAM "AS IS" AND WITH ALL FAULTS.
+* AUTODESK SPECIFICALLY DISCLAIMS ANY IMPLIED WARRANTY OF
+* MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE.  AUTODESK, INC.
+* DOES NOT WARRANT THAT THE OPERATION OF THE PROGRAM WILL BE
+* UNINTERRUPTED OR ERROR FREE.
+*/
+
+#project-list .tabContainer {
+    background-color: white;
+    font-family: ArtifaktElement, sans-serif;
+}
+
+#project-list .hidden {
+    display: none;
+}
+
+#project-list .actionButtonContainer.hidden {
+    padding: 0;
+}
+
+#project-list .actionButtonContainer {
+    display: flex;
+    flex-flow: row;
+    padding: 20px 0 10px 0;
+    margin-left: 76px;
+    vertical-align: middle;
+}
+
+#project-list .actionButtonContainer button {
+    /* following are to override IconButton strange behavior */
+    outline: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+#project-list .actionButtonContainer .verticalSpacer {
+    height: 40px;
+    width: 1px;
+    border-left: gainsboro 1px solid;
+    margin: 0 12px 0 12px;
+}

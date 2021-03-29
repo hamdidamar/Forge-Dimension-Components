@@ -1,0 +1,49 @@
+/*
+* Copyright (c) Autodesk, Inc. All rights reserved
+* Written by Forge Design Automation team for Inventor
+*
+* Permission to use, copy, modify, and distribute this software in
+* object code form for any purpose and without fee is hereby granted,
+* provided that the above copyright notice appears in all copies and
+* that both that copyright notice and the limited warranty and
+* restricted rights notice below appear in all supporting
+* documentation.
+*
+* AUTODESK PROVIDES THIS PROGRAM "AS IS" AND WITH ALL FAULTS.
+* AUTODESK SPECIFICALLY DISCLAIMS ANY IMPLIED WARRANTY OF
+* MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE.  AUTODESK, INC.
+* DOES NOT WARRANT THAT THE OPERATION OF THE PROGRAM WILL BE
+* UNINTERRUPTED OR ERROR FREE.
+*/
+
+.bomEmpty {
+    font-family: ArtifaktElement, sans-serif;
+    padding: 50px;
+    color: #3C3C3C;
+}
+
+.bomEmpty .title {
+    font-size: 28px;
+    margin: 25px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* trick to change SVG color. https://stackoverflow.com/a/49627345 */
+.bomEmpty .title svg path {
+    fill: #FAA21B;
+}
+
+.bomEmpty .image {
+    background-image: url('/no-data.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150px;
+}
+
+.bomEmpty .details {
+    /* font-family: ArtifaktElement-Medium, sans-serif; */
+    font-weight: 600;
+    margin: 25px;
+    padding-left: 150px;
+}

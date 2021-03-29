@@ -1,0 +1,78 @@
+{
+   // Use IntelliSense to find out which attributes exist for C# debugging
+   // Use hover for the description of the existing attributes
+   // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+   "version": "0.2.0",
+   "compounds": [
+      {
+        "name": "Server/Client",
+        "configurations": ["Server", "Client"]
+      }
+   ],
+   "configurations": [
+        {
+          "name": "Debug Jest All",
+          "type": "node",
+          "request": "launch",
+          "runtimeExecutable": "${cwd}/WebApplication/ClientApp/node_modules/.bin/react-scripts",
+          "args": [
+            "test",
+            "--runInBand",
+            "--no-cache",
+            "--env=jsdom"
+          ],
+          "cwd": "${workspaceRoot}/WebApplication/ClientApp/",
+          "protocol": "inspector",
+          "console": "integratedTerminal",
+          "internalConsoleOptions": "neverOpen"
+        },
+        {
+          "name": "Debug Jest File",
+          "type": "node",
+          "request": "launch",
+          "runtimeExecutable": "${cwd}/WebApplication/ClientApp/node_modules/.bin/react-scripts",
+          "args": [
+            "test",
+            "${fileBasenameNoExtension}",
+            "--runInBand",
+            "--no-cache",
+            "--env=jsdom"
+          ],
+          "cwd": "${workspaceRoot}/WebApplication/ClientApp/",
+          "protocol": "inspector",
+          "console": "integratedTerminal",
+          "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "name": "Server",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/WebApplication/bin/Debug/netcoreapp3.1/WebApplication.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/WebApplication",
+            "stopAtEntry": false,
+            "justMyCode": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/WebApplication/Views"
+            }
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Client",
+            "url": "https://localhost:5001",
+            "webRoot": "${workspaceFolder}/WebApplication"
+        }
+      ]
+}
